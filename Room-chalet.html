@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset= "utf-8">
+        <title>URSTAY - Chalet</title>
+
+        <link rel="stylesheet" href="css/Hotel_home.css">
+        <link rel="stylesheet" href="css/footer-distributed.css">
+        <link rel="stylesheet" href="css/style1.css">
+        <link rel="stylesheet" href="css/room-style.css">
+        <link rel="stylesheet" href="css/dropdownmenu.css">
+	    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+        
+        <script type='text/javascript'>
+            // Get the modal
+            var modal = document.getElementById('Arrival');
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            
+            function checkDate(){
+            var start = document.getElementById('start').value;
+                        localStorage.setItem('Sdate', JSON.stringify(start));
+            
+            var end = document.getElementById('end').value;
+                        localStorage.setItem('Edate', JSON.stringify(end));
+            document.getElementById('Trip Data').addEventListener('submit', submitForm);
+                    
+
+            }
+            
+        </script>
+        
+        <header>
+                <a href="Hotel_home.html"><img class="logo" src="images/LogoDraft_2.png"
+                                               style="float:left;width:75px;height:75px;position:absolute;left:5px; top:10px;"></a> URSTAY
+        </header>
+
+        </head>
+
+        <body>
+
+            <div class="topnav">
+                    <a href="Hotel_home.html">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="Rooms-root.html">Rooms</a></button>
+                <div class="dropdown-content">
+                    <a href="Room-chalet.html">Chalet</a>
+                    <a href="Room-villa.html">Garden Villa</a>
+                    <a href="Room-pool.html">Presidential Villa</a>
+                </div>
+                </div>
+                    <a href="Dining.html">Dining & Drinks</a>
+                    <a href=events-root.html>Events</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href=about.html>About Us</a>
+                <button class="topbook" onclick="document.getElementById('Arrival').style.display='block'" style="background-color: #18db9d"><strong>BOOK NOW</strong></button>
+            </div>
+            
+            
+            <form class="bgs">
+                <div class="rooms">
+                    <ul class="room-slideshow">
+                        <li><span></span><div></div></li>
+                        <li><span></span><div></div></li>
+                        <li><span></span><div></div></li>
+                        <li><span></span><div></div></li>
+                        <li><span></span><div></div></li>
+                        <li><span></span><div></div></li>
+                    </ul>
+                    <h1><p style="text-align: center;">UrStay Chalet</p></h1>
+                    <div id="subpagewrap">
+                    <div class="line-room"></div>
+                    <div class ="roomInfo" >
+                            Your escape begins here from one of our well-appointed Chalets. Each individually designed villa is created for a restful retreat, surrounded by the sights and sounds of nature. Enjoy a great night’s sleep in our plush, four-post king-size bed and luxuriate in the indoor sunken bath or refresh the senses in your private outdoor shower. Some chalets feature views of the terraced rice paddies while others face the tranquil resort lagoon
+                        <br>
+                        <br>
+                        <strong>Area</strong>
+                        <br>
+                        Approx. 80m²
+                        <br>
+                        <br>
+                        <strong>Villa Features</strong>
+                        <br>One bedroom with air conditioning
+                        <br>Four-post king-size wooden bed (complete with bed net)
+                        <br>One bathroom with double lavatories
+                        <br>Free-standing terrazzo or sunken bathtub with hand shower
+                        <br>Indoor shower
+                        <br>Outdoor shower with garden view
+                        <br>Work desk
+                        <br>
+                        <br>
+                        <strong>Maximum Occupancy</strong> 
+                        <br>2 adults
+                        <br>With 1 extra bed (additional charge):
+                        2 adults + 1 adult/child (6 years old and above) 
+                        <br>
+                        <br>
+                    </div>
+                     <div class ="roomInfo2" >
+                        <strong>In-Villa Entertainment</strong>
+                            <br>32" LCD TV in the bedrooms
+                            <br>Satellite television channels
+                            <br>Complimentary Wi-Fi internet access
+                            <br>Wireless phone in the bedroom
+                            <br>
+                            <br>
+                            <strong>Others</strong>
+                            <br>Non-smoking villa (equipped with smoke alarm)
+                            <br>Energy-saving bulbs throughout the chalet
+                            <br>Bathrobe/Yukata
+                            <br>Slippers
+                            <br>Umbrellas
+                            <br>Hairdryer
+                            <br>Stationery set
+                            <br>Phone with direct IDD access
+                            <br>In-room safe
+                            <br>Mini bar
+                            <br>Bottled mineral water
+                            <br>Coffee and tea maker
+
+                            <br>Complimentaries
+                            <br>Fruit basket upon arrival
+                            <br>Bottled mineral water 
+                            <br>Coffee and tea maker
+                            <br>Scheduled shuttle service
+                    </div>
+                    <div class="roomInfo3">
+                        <strong>Contact</strong>
+                    <br>
+                    <br>
+                    Tel: +62 361 975825
+                    <br>reservation@urstayresort.com
+                    <br>
+                    <br><b>Base rate:</b> USD 200/night
+                    </div>
+                </div>
+                </div>
+            </form>
+            
+            
+            
+                <div id="Arrival" class="modal">
+                    <form class="modal-content animate" action="Guest_info.HTML" method="POST">
+                        <div class="imgcontainer">
+                          <span onclick="document.getElementById('Arrival').style.display='none'" 
+                                class="close" title="Close Modal">&times;</span>
+                        </div>
+                <div class="container">
+                    <div id="Trip Data">
+                    <label>Arrival Date</label>
+                    <br>
+                            <input type="date" id="start" name="trip-start"
+                            value=""
+                            min="2018-01-01" max="2025-12-31">
+                    <br>
+                    <label>Check-out Date</label>
+                    <br>
+                    <input type="date" id="end" name="trip-end"
+                            value=""
+                            min="2018-01-01" max="2025-12-31">
+                    </div>
+                    <br>
+                    <br>
+                    <button class="bookBTN" type="submit" value="Check Availability" onclick="checkDate()">CHECK AVAILABILITY</button>
+                    <button type="button" onclick="document.getElementById('Arrival').style.display='none'" class="cancelbtn" style="background-color:firebrick;">Cancel</button>
+                </div>
+                </form>
+                </div>
+                <footer class="footer-distributed">
+
+                    <div class="footer-right">
+
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+
+                    </div>
+
+                    <div class="footer-left">
+
+                        <p class="footer-links">
+                            <a href="Hotel_home.html">Home</a>
+                            ·
+                            <a href="about.html">About</a>
+                            ·
+                            <a href="contact.html">Contact</a>
+                        </p>
+
+                        <p>UrStay &copy; 2019</p>
+                    </div>
+
+                </footer>
+		</body>
+</html>

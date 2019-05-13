@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset= "utf-8">
+        <title>URSTAY</title>
+
+        <link rel="stylesheet" href="css/Hotel_home.css">
+        <link rel="stylesheet" href="css/footer-distributed.css">
+        <link rel="stylesheet" href="css/style1.css">
+        <link rel="stylesheet" href="css/confirmation.css">
+        <link rel="stylesheet" href="css/dropdownmenu.css">
+	    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+        
+        <script type='text/javascript'>
+            // Get the modal
+            var modal = document.getElementById('Arrival');
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            
+            function checkDate(){
+            var start = document.getElementById('start').value;
+                        localStorage.setItem('Sdate', JSON.stringify(start));
+            
+            var end = document.getElementById('end').value;
+                        localStorage.setItem('Edate', JSON.stringify(end));
+            document.getElementById('Trip Data').addEventListener('submit', submitForm);
+                    
+
+            }
+            
+            var start_return = localStorage.getItem("Sdate");
+            var start_return2= JSON.parse(start_return);
+            
+            var end_return = localStorage.getItem("Edate");
+            var end_return2= JSON.parse(end_return);
+            
+            console.log(start_return2,end_return2);
+            
+        </script>
+        
+        <header>
+                <img class="logo" src="images/LogoDraft_2.png"
+                style="float:left;width:75px;height:75px;position:absolute;left:5px; top:10px;"> URSTAY
+        </header>
+
+        </head>
+
+        <body>
+
+            <div class="topnav">
+                    <a href="Hotel_home.html">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="Rooms-root.html">Rooms</a></button>
+                <div class="dropdown-content">
+                    <a href="Room-chalet.html">Chalet</a>
+                    <a href="Room-villa.html">Garden Villa</a>
+                    <a href="Room-pool.html">Presidential Villa</a>
+                </div>
+                </div>
+                    <a href="Dining.html">Dining & Drinks</a>
+                    <a href=events-root.html>Events</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href=about.html>About Us</a>
+                <button class="topbook" onclick="document.getElementById('Arrival').style.display='block'" style="background-color: #18db9d"><strong>BOOK NOW</strong></button>
+            </div>
+            
+            
+            <form class="bgs">
+                <div class="rooms">
+                    <h1 style="margin: 0px;"><p style="text-align: center; margin: 0px;"><br>THANK YOU FOR BOOKING WITH US!</p></h1>
+                <div id="subpagewrap">
+                    <div class="line-room"></div>
+                    <div class ="roomInfo" >
+                        
+                    
+                        <input class="guestInput" name="Full Name" type="hidden" maxlength="30" id="Fname" required >
+                        
+                        
+                        <input class="guestInput" name="Email" type="hidden" maxlength="30" id="email" required >
+
+                        
+                        <input class="guestInput" name="Phone" type="hidden" id="phone" required >
+                        
+                        <input type="hidden" id="Arrival" name="Arrival">
+                        
+                        <script>
+                        var a = document.getElementById("Arrival");
+                        a.value = start_return2;
+                        </script>
+
+                        <input type="hidden" id="check-out" name="check-out">
+                        <script>
+                        var b = document.getElementById("check-out");
+                        b.value = end_return2;
+                        </script>
+                       
+
+                        <script>
+                        document.write("<br><b>Arrival:</b> " + start_return2+"</br>"+"<br><b>End date:</b> "+ end_return2 +"</br>");
+
+                        </script>
+                        
+                        
+                    </div>
+                     <div class ="roomInfo" >
+                         Thank you for choosing UrStay. An email confirmation has been emailed to you about your booking. Please take this time to review our check in process.
+                         <br>
+                         <br>
+                         Payment will be done when you arrive at our resort. Check in is at <b>3:00PM</b> and checkout is at <b>11:00AM</b>.
+                         <br>
+                         <br>
+                         There is a $24/night additional charges for parking if you have a vehicle. Valet parking is available in the courtyard in front of the resort. An attendant will be there to assist with luggage and valet needs.
+                         <br>
+                         <br>
+                         We offer complementary breakfast starting at <b>8:00AM</b> everyday. Please ask a front desk employee for more information.
+                         <br>
+                         <br>
+                         Please call our reservations department if you wish to schedule a shuttle for pick and drop off from the airport and resort.
+                         <br>
+                         <br>
+                         Any additional questions, please feel free to call!.
+                         <br>
+                         <br>
+                         We hope you enjoy your stay here at UrStay!
+                    </div>
+                    <div class="roomInfo">
+                        <strong>Contact</strong>
+                    <br>
+                    <br>
+                    If you have any questions or wish to make changes to your reservation please use the following contacts
+                        <br>
+                        <br>
+                    Tel: +62 361 975825
+                    <br>reservation@urstayresort.com
+                    </div>
+                </div>
+                    </div>
+            </form>
+            
+            
+            
+                <div id="Arrival" class="modal">
+                    <form class="modal-content animate" action="Guest_info.HTML" method="POST">
+                        <div class="imgcontainer">
+                          <span onclick="document.getElementById('Arrival').style.display='none'" 
+                                class="close" title="Close Modal">&times;</span>
+                        </div>
+                <div class="container">
+                    <div id="Trip Data">
+                    <label>Arrival Date</label>
+                    <br>
+                            <input type="date" id="start" name="trip-start"
+                            value=""
+                            min="2018-01-01" max="2025-12-31">
+                    <br>
+                    <label>Check-out Date</label>
+                    <br>
+                    <input type="date" id="end" name="trip-end"
+                            value=""
+                            min="2018-01-01" max="2025-12-31">
+                    </div>
+                    <br>
+                    <br>
+
+                    <button class="bookBTN" type="submit" value="Check Availability" onclick="checkDate()">CHECK AVAILABILITY</button>
+                    <button type="button" onclick="document.getElementById('Arrival').style.display='none'" class="cancelbtn" style="background-color:firebrick;">Cancel</button>
+                </div>
+                </form>
+                </div>
+                <footer class="footer-distributed">
+
+                    <div class="footer-right">
+
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+
+                    </div>
+
+                    <div class="footer-left">
+
+                        <p class="footer-links">
+                            <a href="Hotel_home.html">Home</a>
+                            ·
+                            <a href="about.html">About</a>
+                            ·
+                            <a href="contact.html">Contact</a>
+                        </p>
+
+                        <p>UrStay &copy; 2019</p>
+                    </div>
+
+                </footer>
+		</body>
+</html>

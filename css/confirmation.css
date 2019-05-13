@@ -1,0 +1,59 @@
+.rooms {
+    background-color:floralwhite ;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.roomImg-1{
+    background-image: url(../images/chalet-interior.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    width:  100%;
+    height: 400px;
+}
+
+
+.roomInfo, .roomInfo2, .roomInfo3{
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 50px;
+    float: left;
+    padding-left: 100px;
+    margin: 20px 25px 0 0;
+    width: 30%;
+    font-size: 12pt;
+    line-height: 15pt;
+}
+
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 20px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#subpagewrap {
+    width: 100%;
+    height:600px;
+    margin: 0 auto;
+    padding: 20px 0 20px 0;
+    text-align: center;
+    background: floralwhite;
+}
+
+.line-room {
+    width: 100%;
+    border-bottom: 1px solid #000;
+    margin: 10px 0 20px 0;
+}

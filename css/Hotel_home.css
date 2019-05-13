@@ -1,0 +1,349 @@
+                  header {
+                    background-color:#18db9d;
+                    background-image: linear-gradient(to left, teal, floralwhite);
+                    padding: 35px;
+                    text-align: center;
+                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    font-size: 35px;
+                    color: white;
+
+                  }
+
+
+                  body, html{
+                      background-color:  #333;
+                      height: 100%;
+                      margin: 0;
+                      font-family: Arial, Helvetica, sans-serif;
+
+                      }
+                    .content-bg{
+                        background-color: floralwhite;
+                        width:100%;
+                        height: 100%;
+                    }
+                    .contactForm{
+                        margin-left: 700px;
+                    }
+                        .eventIMG{
+                        width: 300px;
+                        position: relative;
+                        float: left;
+                        height: 300px;
+                        background-position: 50% 50%;
+                        background-repeat:   no-repeat;
+                        background-size:     cover;
+                        
+                        }
+
+                  .bg {
+
+                      /* Full height */
+                      height: 100%; 
+
+                      /* Center and scale the image nicely */
+                      background-position: center;
+                      background-repeat: no-repeat;
+                      background-size: auto;
+                    }
+                    .aboutUs{
+                        text-align: center;
+                    }
+                .column-content{
+                    height: 200px;
+                }
+
+                .about {
+                    display: inline-block;
+                    box-sizing: border-box;
+                    text-align: left;
+                    padding: 0px;
+                    float: left;
+                    padding-left: 100px;
+                    margin: 0px 250px 0 0;
+                    width: 40%;
+                    font-size: 12pt;
+                    line-height: 15pt;
+                }
+                    }
+
+                    .cb-slideshow,
+                    .cb-slideshow:after { 
+                        position:relative;
+                        width: 100%;
+                        height: 100%;
+                        top: 0px;
+                        left: 0px;
+                        z-index: 0; 
+                    }
+                    .cb-slideshow:after { 
+                        content: '';
+                        background: transparent url(pattern.png) repeat top left; 
+                    }
+                    .cb-slideshow li span { 
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        color: transparent;
+                        background-size: cover;
+                        background-position: 50% 50%;
+                        background-repeat: none;
+                        opacity: 0;
+                        z-index: 0;
+                        animation: imageAnimation 36s linear infinite 0s; 
+                    }
+                    .cb-slideshow li div { 
+                        z-index: 1000;
+                        position: absolute;
+                        bottom: 30px;
+                        left: 0px;
+                        width: 100%;
+                        text-align: center;
+                        opacity: 0;
+                        color: #fff;
+                        animation: titleAnimation 36s linear infinite 0s; 
+                    }
+                    .cb-slideshow li div h3 { 
+                        font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+                        font-size: 200px;
+                        padding: 0;
+                        line-height: 200px; 
+                    }
+                    .cb-slideshow li:nth-child(1) span { 
+                        background-image: url(beach.jpg) 
+                    }
+                    .cb-slideshow li:nth-child(2) span { 
+                        background-image: url(bg_1.jpg);
+                        animation-delay: 6s; 
+                    }
+                    .cb-slideshow li:nth-child(3) span { 
+                        background-image: url(bg_2.jpg);
+                        animation-delay: 12; 
+                    }
+                    .cb-slideshow li:nth-child(4) span { 
+                        background-image: url(bg_3.jpg);
+                        animation-delay: 18s; 
+                    }
+                    .cb-slideshow li:nth-child(5) span { 
+                        background-image: url(bg_4.jpg);
+                        animation-delay: 24s; 
+                    }
+                    .cb-slideshow li:nth-child(6) span { 
+                        background-image: url(bg_5.jpg);
+                        animation-delay: 30s; 
+                    }
+
+                    .cb-slideshow li:nth-child(2) div { 
+                        animation-delay: 6s; 
+                    }
+                    .cb-slideshow li:nth-child(3) div { 
+                        animation-delay: 12s; 
+                    }
+                    .cb-slideshow li:nth-child(4) div { 
+                        animation-delay: 18s; 
+                    }
+                    .cb-slideshow li:nth-child(5) div { 
+                        animation-delay: 24s; 
+                    }
+                    .cb-slideshow li:nth-child(6) div { 
+                        animation-delay: 30s; 
+                    }
+                    @keyframes imageAnimation { 
+                        0% { opacity: 0; animation-timing-function: ease-in; }
+                        8% { opacity: 1; animation-timing-function: ease-out; }
+                        17% { opacity: 1 }
+                        25% { opacity: 0 }
+                        100% { opacity: 0 }
+                    }
+                    @keyframes titleAnimation { 
+                        0% { opacity: 0 }
+                        8% { opacity: 1 }
+                        17% { opacity: 1 }
+                        19% { opacity: 0 }
+                        100% { opacity: 0 }
+                    }
+                    .no-cssanimations .cb-slideshow li span{
+                        opacity: 1;
+                    }
+                    @media screen and (max-width: 1140px) { 
+                        .cb-slideshow li div h3 { font-size: 100px }
+                    }
+                    @media screen and (max-width: 600px) { 
+                        .cb-slideshow li div h3 { font-size: 60px }
+                    }
+                    .no-cssanimations .cb-slideshow li span{
+                        opacity: 1;
+                    }
+                .topnav  {
+                    overflow: auto;
+                    background-color: #333;
+                    text-align: center;
+
+                  }
+
+                  .topbook, .topnav a {
+                    display:inline-block;
+                    border: 0; 
+                    color: #f2f2f2;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                    font-size: 17px;
+                  }
+                    .topbook:hover{
+                        opacity: .8;
+                    }
+
+                  .topnav a:hover {
+                    background-color:#18db9d;
+                    color: black;
+                  }
+
+                  .topnav a.active {
+                    background-color:rgb(165,306,167);
+                    color: black;
+                  }
+
+                  .container{
+                    position:relative;
+                    text-align: center;
+                    color: #333;
+                    background-color: white;
+                    width: 250px;
+                    border: 10px solid #18db9d;
+                    padding: 35px;
+                    margin: auto;
+                    font-weight: bold;
+                    font-family: Arial, Helvetica, sans-serif;
+                    clear: both;
+
+                }
+                .container input {
+                  width: 60%;
+                  clear: both;
+                  text-align: center
+                }
+                .imgcontainer {
+                  text-align: center;
+                  margin: 24px 0 12px 0;
+                  position: relative;
+                }
+
+                .bookBTN, .cancelbtn{
+                font-family: sans-serif;
+                text-transform: uppercase;
+                background-color: #18db9d;
+                width: 100%;
+                height: 30px;
+                margin: 6px;
+                padding: 6px;
+                color: white;
+                font-size: 12px;
+                cursor: pointer;
+                border: 0;
+                box-shadow: none;
+                border-radius: 0px;}
+
+                .bookBTN:hover {
+                  opacity: 0.8; }
+                .cancelbtn:hover {
+                  opacity: 0.8; }
+
+                  .Guest_info{
+
+                    text-align: center;
+                    color: #333;
+                    background-color: white;
+                    width: 50%;
+                    border: 15px solid #18db9d;
+                    padding: 5px;
+                    margin: auto;
+                    font-weight: bold;
+                    font-family: Arial, Helvetica, sans-serif;
+
+
+                  }
+
+                  .Intro{
+                    color: #333; 
+                    padding: 5px;
+                    font-family: Arial, Helvetica, sans-serif;
+
+                  }
+                  .Submit{
+                    font-weight: bold;
+                  }
+                  
+                  .roomInput, .adultInput{
+                  width:130px;
+                  }
+                input {
+                    font-family: Arial
+
+                }
+
+
+            /* The Modal (background) */
+            .modal {
+              display: none; /* Hidden by default */
+              position: fixed; /* Stay in place */
+              z-index: 1; /* Sit on top */
+              left: 0;
+              top: 0;
+              width: 100%; /* Full width */
+              height: 100%; /* Full height */
+              overflow: auto; /* Enable scroll if needed */
+              background-color: rgb(0,0,0); /* Fallback color */
+              background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+              padding-top: 60px;
+            }
+
+            /* Modal Content/Box */
+            .modal-content {
+              margin: 10% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+              border: 0px solid #888;
+              width: 25%; /* Could be more or less, depending on screen size */
+            }
+
+            /* The Close Button (x) */
+            .close {
+              position: absolute;
+              right: 25px;
+              top: 0;
+              color: #18db9d;
+              font-size: 35px;
+              font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+              color: red;
+              cursor: pointer;
+            }
+
+            /* Add Zoom Animation */
+            .animate {
+              -webkit-animation: animatezoom 0.6s;
+              animation: animatezoom 0.6s
+            }
+
+            @-webkit-keyframes animatezoom {
+              from {-webkit-transform: scale(0)} 
+              to {-webkit-transform: scale(1)}
+            }
+
+            @keyframes animatezoom {
+              from {transform: scale(0)} 
+              to {transform: scale(1)}
+            }
+
+            /* Change styles for span and cancel button on extra small screens */
+            @media screen and (max-width: 300px) {
+              span.psw {
+                 display: block;
+                 float: none;
+              }
+                
+            }

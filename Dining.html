@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset= "utf-8">
+        <title>URSTAY - Dining</title>
+
+        <link rel="stylesheet" href="css/Hotel_home.css">
+        <link rel="stylesheet" href="css/footer-distributed.css">
+        <link rel="stylesheet" href="css/style1.css">
+        <link rel="stylesheet" href="css/dining-style.css">
+        <link rel="stylesheet" href="css/dropdownmenu.css">
+	    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+        
+        <script type='text/javascript'>
+            // Get the modal
+            var modal = document.getElementById('Arrival');
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            
+            function checkDate(){
+            var start = document.getElementById('start').value;
+                        localStorage.setItem('Sdate', JSON.stringify(start));
+            
+            var end = document.getElementById('end').value;
+                        localStorage.setItem('Edate', JSON.stringify(end));
+            document.getElementById('Trip Data').addEventListener('submit', submitForm);
+                    
+
+            }
+            
+        </script>
+        
+        <header>
+                <img class="logo" src="images/LogoDraft_2.png"
+                style="float:left;width:75px;height:75px;position:absolute;left:5px; top:10px;"> URSTAY
+        </header>
+
+        </head>
+
+        <body>
+
+            <div class="topnav">
+                    <a href="Hotel_home.html">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="Rooms-root.html">Rooms</a></button>
+                <div class="dropdown-content">
+                    <a href="Room-chalet.html">Chalet</a>
+                    <a href="Room-villa.html">Garden Villa</a>
+                    <a href="Room-pool.html">Presidential Villa</a>
+                </div>
+                </div>
+                    <a href="Dining.html">Dining & Drinks</a>
+                    <a href=events-root.html>Events</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href=about.html>About Us</a>
+                <button class="topbook" onclick="document.getElementById('Arrival').style.display='block'" style="background-color: #18db9d"><strong>BOOK NOW</strong></button>
+            </div>
+            
+            
+            <form class="bgs">
+                <div class="rooms">
+                    <ul class="room-slideshow">
+                        <li><span></span><div></div></li>
+                        <li><span></span><div></div></li>
+                        <li><span></span><div></div></li>
+                        <li><span></span><div></div></li>
+                        <li><span></span><div></div></li>
+                        <li><span></span><div></div></li>
+                    </ul>
+                    <h1><p style="text-align: center;">UrStay - UrDine</p></h1>
+                <div id="subpagewrap">
+                    <div class="line-room"></div>
+                    <div class ="roomInfo" >
+                            For an intimate evening under the stars with flickering candles to set the mood, our chef will create a six-course dinner of gourmet excellence. This is the perfect opportunity for guests to celebrate the spirit of love in the timeless ambience.
+                        <br>
+                        <br>
+                        <strong>Set Menu</strong>
+                        <br>
+                        <br>6-course meal
+                        <br>A bottle of Balinese sparkling wine
+                        <br>Candles and decoration for dinner 
+                        <br>Private venue
+                        <br>White dove release
+
+                        <br>
+                        <br>
+                        <strong>Price</strong>
+                        <br>USD 200/person
+                        <br>Inclusive a bottle of sparkling wine
+                        <br>
+                    </div>
+                     <div class ="roomInfo" >
+                        <strong>Menu Option</strong>
+                         <br>
+                         <br><b>Amuse Bouche</b>
+                            <br>Pan Seared Pacific Scallop with Chili Salsa and Brioche Crumb
+                         <br><b>Appetizer Trio</b>
+                            <br>Crispy Mussel with Chipotle Bacon, Smoked Salmon on Thai Crispy Prawn Toast, Mango & <br>Marinated Chicken Paper Rice Roll
+                         <br><b>Granita</b>
+                            <br>Watermelon Orange Granita
+                         <br><b>Soup</b>
+                            <br>Red Bean and Pumpkin Clear Soup with Shitake and Prawn Dumpling
+                         <br><b>Main Course</b>
+                            <br>Pan Seared Australia Beef Loin on Asian Vegetable, Turning Potato and Rosemary Gravy
+                         <br><b>Dessert</b>
+                            <br>Crepes Suzette with Chocolate, Orange Grand Marnier Sauce and Tiramisu Ice Cream
+                    </div>
+                    <div class="roomInfo">
+                        <strong>Contact</strong>
+                    <br>
+                    <br>
+                    Tel: +62 361 975825
+                    <br>reservation@urstayresort.com
+                    </div>
+                </div>
+                    </div>
+            </form>
+            
+            
+            
+                <div id="Arrival" class="modal">
+                    <form class="modal-content animate" action="Guest_info.HTML" method="POST">
+                        <div class="imgcontainer">
+                          <span onclick="document.getElementById('Arrival').style.display='none'" 
+                                class="close" title="Close Modal">&times;</span>
+                        </div>
+                <div class="container">
+                    <div id="Trip Data">
+                    <label>Arrival Date</label>
+                    <br>
+                            <input type="date" id="start" name="trip-start"
+                            value=""
+                            min="2018-01-01" max="2025-12-31">
+                    <br>
+                    <label>Check-out Date</label>
+                    <br>
+                    <input type="date" id="end" name="trip-end"
+                            value=""
+                            min="2018-01-01" max="2025-12-31">
+                    </div>
+                    <br>
+                    <br>
+                    <button class="bookBTN" type="submit" value="Check Availability" onclick="checkDate()">CHECK AVAILABILITY</button>
+                    <button type="button" onclick="document.getElementById('Arrival').style.display='none'" class="cancelbtn" style="background-color:firebrick;">Cancel</button>
+                </div>
+                </form>
+                </div>
+                <footer class="footer-distributed">
+
+                    <div class="footer-right">
+
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+
+                    </div>
+
+                    <div class="footer-left">
+
+                        <p class="footer-links">
+                            <a href="Hotel_home.html">Home</a>
+                            ·
+                            <a href="about.html">About</a>
+                            ·
+                            <a href="contact.html">Contact</a>
+                        </p>
+
+                        <p>UrStay &copy; 2019</p>
+                    </div>
+
+                </footer>
+		</body>
+</html>

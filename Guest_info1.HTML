@@ -1,0 +1,150 @@
+<?php
+if($_POST["message"]) {
+    mail("vtran91@gmail.com", "Form to email message", $_POST["message"], "From: an@email.address");
+}
+?>
+
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset= "utf-8">
+        <title>URSTAY</title>
+    
+        <link rel="stylesheet" href="css/Hotel_home.css">
+        <link rel="stylesheet" href="css/footer-distributed.css">
+        <link rel="stylesheet" href="css/style1.css">
+        <link rel="stylesheet" href="css/dropdownmenu.css">
+        <link rel="stylesheet" href="css/room-style.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+        <script scr= "scripts/jquery.js"></script>
+        <script>
+            
+            function clicked(e)
+            {
+                if(!confirm('Are you sure you want to submit?'))e.preventDefault();
+                window.location.href = "confirmation.html";
+                
+            }
+            
+            var start_return = localStorage.getItem("Sdate");
+            var start_return2= JSON.parse(start_return);
+            
+            var end_return = localStorage.getItem("Edate");
+            var end_return2= JSON.parse(end_return);
+            
+            console.log(start_return2,end_return2);
+           
+        
+        </script>
+
+
+
+
+        <header>
+                <a href="Hotel_home.html"><img class="logo" src="images/LogoDraft_2.png"
+                style="float:left;width:75px;height:75px;position:absolute;left:5px; top:10px;"></a> URSTAY
+        </header>
+
+    </head>
+
+
+    <body>
+
+            <div class="topnav">
+                    <a href="Hotel_home.html">Home</a>
+                
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="Rooms-root.html">Rooms</a></button>
+                <div class="dropdown-content">
+                    <a href="Room-chalet.html">Chalet</a>
+                    <a href="Room-villa.html">Garden Villa</a>
+                    <a href="Room-pool.html">Presidential Villa</a>
+                </div>
+                </div>
+                
+                    <a href=#>Dining & Drinks</a>
+                    <a href=#>Events</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="about.html">About Us</a>
+        
+        </div>
+        
+        <div id="subpagewrap">
+        <div class="line-room"></div>
+       
+        <form id="guestData" name="guestData" action="confirmation.html" method="GET">
+        <div class="guestInfo">
+            <input type="hidden" id="Arrival" name="Arrival">
+            <script>
+            var a = document.getElementById("Arrival");
+            a.value = start_return2;
+            </script>
+
+            <input type="hidden" id="check-out" name="check-out">
+            <script>
+            var b = document.getElementById("check-out");
+            b.value = end_return2;
+            </script>
+            <label><b>Dates</b><br></label>
+        
+            <script>
+                
+            document.write("<br><b>Arrival:</b> " + start_return2+"</br>"+"<br><b>End date:</b> "+ end_return2 +"</br>");
+
+            </script>
+            <label><br>Full Name</label>
+            <input class="guestInput" name="Full Name" type="text" maxlength="30" id="Fname" required >
+
+            <label><br>Email</label>
+            <input class="guestInput" name="Email" type="email" maxlength="30" id="email" required >
+
+            <label><br>Phone</label>
+            <input class="guestInput" name="Phone" type="tel" id="phone" required >
+            
+            <label><br>Room Type</label><br>
+            <select name="room" id="roomType">
+                  <option value="chalet"> UrStay Chalet </option>
+                  <option value="gvilla"> Garden Villa </option>
+                  <option value="pvilla"> Presidential Villa </option>
+            </select>
+
+            <br> 
+            <input id="bookRoom" class="bookBTN" type="submit" onclick="clicked()"></button>
+            
+            </div>
+        </form>
+        </div>
+
+
+        <footer class="footer-distributed">
+
+                    <div class="footer-right">
+
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+
+                    </div>
+
+                    <div class="footer-left">
+
+                        <p class="footer-links">
+                            <a href="Hotel_home.html">Home</a>
+                            ·
+                            <a href="about.html">About</a>
+                            ·
+                            <a href="contact.html">Contact</a>
+                        </p>
+
+                        <p>UrStay &copy; 2019</p>
+                    </div>
+
+                </footer>
+
+        <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase.js"></script>
+        <script src = "app.js"> </script>
+    </body>
+    
+
+</html>
